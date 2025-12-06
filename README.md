@@ -6,7 +6,7 @@ Cotexto es un proyecto educativo enfocado en aprender las bases de **PHP**, desd
 
 - **Arquitectura**:
 
-  - utilizamos la orientada a objetos
+  - utilizamos la orientada a objetos / Active Record
 
 - **Frontend**:
 

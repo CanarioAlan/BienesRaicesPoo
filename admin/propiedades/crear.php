@@ -2,15 +2,14 @@
 require '../../includes/app.php';
 
 use App\Propiedad;
+use App\Vendedor;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager as Image;
 
 estadoAutenticado();
 $propiedad  = new Propiedad;
-
-$db = conectarDB();
-$consulta = "SELECT * FROM vendedores";
-$resultadoConsulta = mysqli_query($db, $consulta);
+// consulta para optener los vendedores 
+$vendedores = Vendedor::All();
 $errores = Propiedad::getErrores();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //y instanciamos la clase de propiedad una vez que validemos que es metodo post

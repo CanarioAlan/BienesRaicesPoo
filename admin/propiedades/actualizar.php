@@ -2,6 +2,7 @@
 //traemos el require de las funciones y llamamos a la funcion de autenticacion
 
 use App\Propiedad;
+use App\Vendedor;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager as Image;
 
@@ -16,10 +17,11 @@ $id = filter_var($id, FILTER_VALIDATE_INT);
 if (!$id) {
     header('Location: /admin');
 }
+//optenemos los datos de la propiedad
 $propiedad = Propiedad::propFiltrada($id);
-//consulta para obtener los vendedores
-$consulta = "SELECT * FROM vendedores";
-$resultadoConsulta = mysqli_query($db, $consulta);
+// consulta para optener los vendedores
+$vendedores = Vendedor::All();
+//
 // Arreglo con mensajes de errores
 $errores = Propiedad::getErrores();
 // Ejecutar el codigo despues de que el usuario envia el formulario | _server es una variable superglobal que contiene informacion del servidor y del entorno de ejecucion
@@ -52,8 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $propiedad->setImagen($nombreImagen);
     }
     if (empty($errores)) {
+        if ($_FILES['propiedad']['tmp_name']['imagen']) {
+            $imagen->save(CARPETA_IMAGENES . $nombreImagen);
+        }
         $resultado = $propiedad->guardar();
-        $imagen->save(CARPETA_IMAGENES . $nombreImagen);
     }
 }
 incluirTemplate('header');

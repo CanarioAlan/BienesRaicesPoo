@@ -1,42 +1,28 @@
-# Cotexto
+# Bienes Raíces
 
-Cotexto es un proyecto educativo enfocado en aprender las bases de **PHP**, desde la conexión a bases de datos hasta el diseño y validaciones, todo implementado con PHP. El objetivo es crear un sistema de gestión de propiedades inmobiliarias con vistas tanto para clientes como para administradores.
+Proyecto educativo para aprender PHP orientado a objetos y CRUD de propiedades con arquitectura Active Record, frontend con Sass y automatización con Gulp.
 
-## Características
+## Descripción
 
-- **Arquitectura**:
-
-  - utilizamos la orientada a objetos / Active Record
-
-- **Frontend**:
-
-  - Utiliza **Sass** para estilos avanzados.
-  - Automatización y optimización de CSS e imágenes mediante **Gulp** y sus librerías.
-
-- **Backend**:
-  - Conexión y manejo de bases de datos con PHP.
-  - Validaciones y lógica de negocio en PHP puro.
-  - CRUD completo de propiedades desde el panel de administración.
-  - Vistas diferenciadas para clientes y administradores.
+Aplicación simple de inmobiliaria con panel de administración para crear/editar/eliminar propiedades y vistas públicas para clientes.
 
 ## Uso
 
-- Accede como cliente para visualizar propiedades.
-- Ingresa como administrador para gestionar (crear, leer, actualizar y eliminar) propiedades.
+- Navegar como cliente para ver propiedades.
+- Iniciar sesión como administrador para gestionar propiedades desde el panel.
 
 ## Tecnologías
 
-- PHP
+- PHP (OOP, Active Record)
 - MySQL
 - Sass
 - Gulp
+- HTML
 
-## Profesor
+## Profesor / Referencia
 
-### Juan Pablo De la torre Valdez
-
-** Web: ** https://codigoconjuan.com/
-** curso: ** https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql
+Juan Pablo De la Torre Valdez — https://codigoconjuan.com/  
+Curso de referencia: https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql
 
 ## Licencia
 
